@@ -1,0 +1,34 @@
+{
+  "name": "astro-fathom",
+  "version": "1.0.0",
+  "description": "Fathom Analytics tracking for your Astro site.",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts"
+  ],
+  "keywords": [
+    "withastro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tony-sull/astro-fathom.git"
+  },
+  "author": {
+    "name" :"Tony Sullivan",
+    "url": "https://tonysull.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tony-sull/astro-fathom/issues"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "astro": "^1.6.11"
+  },
+  "peerDependencies": {
+    "astro": "^1.6.11"
+  }
+}
