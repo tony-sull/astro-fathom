@@ -17,16 +17,30 @@
     "url": "git+https://github.com/tony-sull/astro-fathom.git"
   },
   "author": {
-    "name" :"Tony Sullivan",
+    "name": "Tony Sullivan",
+    "email": "tony@astro.build",
     "url": "https://tonysull.co"
   },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tony-sull/astro-fathom/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "format": "run-s format:*",
+    "format:prettier": "prettier --ignore-path .prettierignore -w .",
+    "format:eslint": "eslint --fix --ignore-path .eslintignore --ext .js,.ts --fix .",
+    "lint": "run-s lint:*",
+    "lint:prettier": "prettier --ignore-path .prettierignore -c .",
+    "lint:eslint": "eslint --fix --ignore-path .eslintignore --ext .js,.ts ."
+  },
   "devDependencies": {
-    "astro": "^1.6.11"
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "astro": "^1.6.11",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.0"
   },
   "peerDependencies": {
     "astro": "^1.6.11"
