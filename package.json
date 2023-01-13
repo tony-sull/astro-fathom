@@ -26,6 +26,7 @@
   },
   "scripts": {
     "postinstall": "husky install",
+    
     "lint": "run-p --print-label --continue-on-error lint:*",
     "lint:eslint": "eslint --ignore-path .eslintignore --ext js,jsx,ts,tsx,mjs,cjs,astro .",
     "lint:ts": "tsc --noEmit",
