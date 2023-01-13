@@ -1,0 +1,62 @@
+---
+export interface Props {
+  enabled?: boolean
+  trackingUrl?: string
+  site: string
+  honorDnt?: boolean
+  auto?: boolean
+  canonical?: boolean
+  excludedDomains?: string[]
+  includedDomains?: string[]
+  loadType?: 'defer' | 'async'
+  spa?: 'auto' | 'history' | 'hash'
+}
+
+const {
+  enabled = import.meta.env.PROD,
+  trackingUrl = 'https://cdn.usefathom.com',
+  site,
+  honorDnt = false,
+  auto = true,
+  canonical = true,
+  excludedDomains,
+  includedDomains,
+  loadType = 'defer',
+  spa = 'auto',
+} = Astro.props
+
+const src = new URL('script.js', trackingUrl).toString()
+
+const loadProps = {
+  [loadType]: true,
+}
+---
+
+{
+  enabled ? (
+    <script
+      is:inline
+      key="fathom-script"
+      src={src}
+      data-site={site}
+      data-honor-dnt={honorDnt}
+      data-auto={auto}
+      data-canonical={canonical}
+      data-excluded-domains={excludedDomains}
+      data-included-domains={includedDomains}
+      data-spa={spa}
+      {...loadProps}
+    />
+  ) : (
+    <script is:inline>
+      const logger = (scope) => (...args) => console.info(`[astro-fathom] ${scope}(${args.join(', ')})`)
+
+      window.fathom = {
+        send: logger('send'),
+        trackEvent: logger('trackEvent'),
+        trackGoal: logger('trackGoal'),
+        trackPageview: logger('trackPageview')
+      }
+    </script>
+  )
+}
