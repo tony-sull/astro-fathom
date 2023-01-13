@@ -28,12 +28,12 @@
   },
   "scripts": {
     "lint": "run-p --print-label --continue-on-error lint:*",
-    "lint:eslint": "eslint --ignore-path .gitignore --ext js,jsx,ts,tsx,mjs,cjs,astro .",
+    "lint:eslint": "eslint --ignore-path .eslintignore --ext js,jsx,ts,tsx,mjs,cjs,astro .",
     "lint:ts": "tsc --noEmit",
     "lint:astro": "astro check",
     "format": "run-s format:*",
     "format:prettier": "prettier -w --plugin-search-dir=. .",
-    "format:eslint": "eslint --ignore-path .gitignore --ext js,jsx,ts,tsx,mjs,cjs,astro --fix .",
+    "format:eslint": "eslint --ignore-path .eslintignore --ext js,jsx,ts,tsx,mjs,cjs,astro --fix .",
     "format:imports": "organize-imports-cli ./tsconfig.json"
   },
   "devDependencies": {
