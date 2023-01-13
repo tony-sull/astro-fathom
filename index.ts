@@ -1,1 +1,1 @@
-export { default as Fathom } from "./Fathom.astro"
+export { default as Fathom } from "./Fathom.astro";
