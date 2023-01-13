@@ -27,21 +27,30 @@
     "url": "https://github.com/tony-sull/astro-fathom/issues"
   },
   "scripts": {
+    "lint": "run-p --print-label --continue-on-error lint:*",
+    "lint:eslint": "eslint --ignore-path .gitignore --ext js,jsx,ts,tsx,mjs,cjs,astro .",
+    "lint:ts": "tsc --noEmit",
+    "lint:astro": "astro check",
     "format": "run-s format:*",
-    "format:prettier": "prettier --ignore-path .prettierignore -w .",
-    "format:eslint": "eslint --fix --ignore-path .eslintignore --ext .js,.ts --fix .",
-    "lint": "run-s lint:*",
-    "lint:prettier": "prettier --ignore-path .prettierignore -c .",
-    "lint:eslint": "eslint --fix --ignore-path .eslintignore --ext .js,.ts ."
+    "format:prettier": "prettier -w --plugin-search-dir=. .",
+    "format:eslint": "eslint --ignore-path .gitignore --ext js,jsx,ts,tsx,mjs,cjs,astro --fix .",
+    "format:imports": "organize-imports-cli ./tsconfig.json"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
     "astro": "^1.6.11",
-    "eslint": "^8.28.0",
-    "eslint-config-prettier": "^8.5.0",
+    "astro-eslint-parser": "^0.9.4",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.21.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.0"
+    "organize-imports-cli": "^0.10.0",
+    "prettier": "^2.8.2",
+    "prettier-plugin-astro": "^0.7.2"
   },
   "peerDependencies": {
     "astro": "^1.6.11"
