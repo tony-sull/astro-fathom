@@ -49,9 +49,15 @@ const loadProps = {
 		/>
 	) : (
 		<script is:inline>
-			const logger = (scope) => (...args) => console.info(`[astro-fathom] ${scope}($
-			{args.join(", ")})`); window.fathom = {}; window.fathom.send = logger('send');
-			window.fathom.trackEvent = logger('trackEvent'); window.fathom.trackGoal = logger('trackGoal')
+			function logger(scope) {
+				return function(...args) {
+					console.info(`[astro-fathom] ${scope}(${args.join(", ")})`)
+				}
+			}
+			window.fathom = {};
+			window.fathom.send = logger('send');
+			window.fathom.trackEvent = logger('trackEvent');
+			window.fathom.trackGoal = logger('trackGoal')
 			window.fathom.trackPageview = logger('trackPageview');
 		</script>
 	)
