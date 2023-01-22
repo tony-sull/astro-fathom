@@ -12,7 +12,9 @@
   ],
   "keywords": [
     "withastro",
-    "analytics"
+    "analytics",
+    "fathom",
+    "usefathom"
   ],
   "repository": {
     "type": "git",
