@@ -10,7 +10,12 @@
     "index.ts",
     "Fathom.astro"
   ],
-  "keywords": [],
+  "keywords": [
+    "withastro",
+    "analytics",
+    "fathom",
+    "usefathom"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tony-sull/astro-fathom.git"
@@ -27,8 +32,6 @@
   "scripts": {
     "lint": "run-p --print-label --continue-on-error lint:*",
     "lint:eslint": "eslint --ignore-path .eslintignore --ext js,jsx,ts,tsx,mjs,cjs,astro .",
-    "lint:ts": "tsc --noEmit",
-    "lint:astro": "astro check",
     "format": "run-s format:*",
     "format:prettier": "prettier -w --plugin-search-dir=. .",
     "format:eslint": "eslint --ignore-path .eslintignore --ext js,jsx,ts,tsx,mjs,cjs,astro --fix .",

@@ -32,10 +32,10 @@ import { Fathom } from "astro-fathom"
 ---
 
 <html>
-    <head>
-        <!-- head stuff -->
-        <Fathom site="<your fathom site id>" />
-    </head>
+  <head>
+    <!-- head stuff -->
+    <Fathom site="<your fathom site id>" />
+  </head>
 </html>
 ```
 
@@ -51,18 +51,18 @@ It's common to keep analytics events separate for different deployment environme
 
 See the Fathom docs for more information on these [advanced tracking options](https://usefathom.com/support/tracking-advanced).
 
-| Name              | Type                                        | Default                                                              | Description                                        |
-| ----------------- | ------------------------------------------- | ---------------------------                                          | -------------------------------------------------- |
-| `enabled`         | Boolean                                     | `import.meta.env.PROD`                                               | When disabled, events are logged to the console    |
-| `site`            | String                                      | `import.meta.env.FATHOM_SITE`                                        | Your Fathom site id (required)                     |
-| `trackingUrl`     | String                                      | `import.meta.env.FATHOM_TRACKING_URL` or `https://cdn.usefathom.com` | Your Fathom custom domain                          |
-| `honorDnt`        | Boolean                                     | `false`                                                              | Honor Do Not Track?                                |
-| `auto`            | Boolean                                     | `true`                                                               | Automatically track page views?                    |
-| `canonical`       | Boolean                                     | `true`                                                               | Use the canonical URL, instead of the current URL? |
-| `excludedDomains` | String[]                                    | []                                                                   | Excludes tracking for these domains                |
-| `includedDomains` | String[]                                    | []                                                                   | Include tracking for these domains                 |
-| `spa`             | `"auto"`, `"history"` or `"hash"`           | `"auto"`                                                             | Tracking mode                                      |
-| `loadType`        | `"defer"` or `"async"`                      | `"defer"`                                                            | Tracking mode                                      |
+| Name              | Type                              | Default                                                              | Description                                        |
+| ----------------- | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------- |
+| `enabled`         | Boolean                           | `import.meta.env.PROD`                                               | When disabled, events are logged to the console    |
+| `site`            | String                            | `import.meta.env.FATHOM_SITE`                                        | Your Fathom site id (required)                     |
+| `trackingUrl`     | String                            | `import.meta.env.FATHOM_TRACKING_URL` or `https://cdn.usefathom.com` | Your Fathom custom domain                          |
+| `honorDnt`        | Boolean                           | `false`                                                              | Honor Do Not Track?                                |
+| `auto`            | Boolean                           | `true`                                                               | Automatically track page views?                    |
+| `canonical`       | Boolean                           | `true`                                                               | Use the canonical URL, instead of the current URL? |
+| `excludedDomains` | String[]                          | []                                                                   | Excludes tracking for these domains                |
+| `includedDomains` | String[]                          | []                                                                   | Include tracking for these domains                 |
+| `spa`             | `"auto"`, `"history"` or `"hash"` | `"auto"`                                                             | Tracking mode                                      |
+| `loadType`        | `"defer"` or `"async"`            | `"defer"`                                                            | Tracking mode                                      |
 
 #### Example
 
@@ -72,13 +72,13 @@ import { Fathom } from "astro-fathom"
 ---
 
 <html>
-    <head>
-        <!-- with FATHOM environment variables -->
-        <Fathom />
+  <head>
+    <!-- with FATHOM environment variables -->
+    <Fathom />
 
-        <!-- or if you prefer to inline configuration variables -->
-        <Fathom site="ABCDEFGH" trackingUrl="https://actor-endorsed.example.com" />
-    </head>
+    <!-- or if you prefer to inline configuration variables -->
+    <Fathom site="ABCDEFGH" trackingUrl="https://actor-endorsed.example.com" />
+  </head>
 </html>
 ```
 
