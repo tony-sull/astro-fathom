@@ -10,7 +10,10 @@
     "index.ts",
     "Fathom.astro"
   ],
-  "keywords": [],
+  "keywords": [
+    "withastro",
+    "analytics"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tony-sull/astro-fathom.git"
