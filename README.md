@@ -49,7 +49,7 @@ It's common to keep analytics events separate for different deployment environme
 
 ### Available options
 
-> Support for custom domains via the `trackingUrl` option was removed in version 2.0. See Fathom's [docs](https://usefathom.com/docs/script/custom-domains) for more details. 
+> Support for custom domains via the `trackingUrl` option was removed in version 2.0. See Fathom's [docs](https://usefathom.com/docs/script/custom-domains) for more details.
 
 See the Fathom docs for more information on these [advanced tracking options](https://usefathom.com/support/tracking-advanced).
 
