@@ -51,17 +51,17 @@ It's common to keep analytics events separate for different deployment environme
 
 See the Fathom docs for more information on these [advanced tracking options](https://usefathom.com/support/tracking-advanced).
 
-| Name              | Type                              | Default                                                              | Description                                        |
-| ----------------- | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------- |
-| `enabled`         | Boolean                           | `import.meta.env.PROD`                                               | When disabled, events are logged to the console    |
-| `site`            | String                            | `import.meta.env.FATHOM_SITE`                                        | Your Fathom site id (required)                     |
-| `honorDnt`        | Boolean                           | `false`                                                              | Honor Do Not Track?                                |
-| `auto`            | Boolean                           | `true`                                                               | Automatically track page views?                    |
-| `canonical`       | Boolean                           | `true`                                                               | Use the canonical URL, instead of the current URL? |
-| `excludedDomains` | String[]                          | []                                                                   | Excludes tracking for these domains                |
-| `includedDomains` | String[]                          | []                                                                   | Include tracking for these domains                 |
-| `spa`             | `"auto"`, `"history"` or `"hash"` | `"auto"`                                                             | Tracking mode                                      |
-| `loadType`        | `"defer"` or `"async"`            | `"defer"`                                                            | Tracking mode                                      |
+| Name              | Type                              | Default                       | Description                                        |
+| ----------------- | --------------------------------- | ----------------------------- | -------------------------------------------------- |
+| `enabled`         | Boolean                           | `import.meta.env.PROD`        | When disabled, events are logged to the console    |
+| `site`            | String                            | `import.meta.env.FATHOM_SITE` | Your Fathom site id (required)                     |
+| `honorDnt`        | Boolean                           | `false`                       | Honor Do Not Track?                                |
+| `auto`            | Boolean                           | `true`                        | Automatically track page views?                    |
+| `canonical`       | Boolean                           | `true`                        | Use the canonical URL, instead of the current URL? |
+| `excludedDomains` | String[]                          | []                            | Excludes tracking for these domains                |
+| `includedDomains` | String[]                          | []                            | Include tracking for these domains                 |
+| `spa`             | `"auto"`, `"history"` or `"hash"` | `"auto"`                      | Tracking mode                                      |
+| `loadType`        | `"defer"` or `"async"`            | `"defer"`                     | Tracking mode                                      |
 
 #### Example
 
