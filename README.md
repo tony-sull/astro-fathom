@@ -45,9 +45,11 @@ The Fathom script will be included in all production builds. When running with `
 
 ### Environment variables
 
-It's common to keep analytics events separate for different deployment environments - for example `test`, `staging`, and `production`. We recommend using the environment variables listed below to configure the correct `site`, keeping your analytics configuration in the same place as your other environment configuration variables.
+It's common to keep analytics events separate for different deployment environments - for example `test`, `staging`, and `production`. We recommend using the environment variable listed below to configure the correct `site`, keeping your analytics configuration in the same place as your other environment configuration variables.
 
 ### Available options
+
+> Support for custom domains via the `trackingUrl` option was removed in version 2.0. See Fathom's [docs](https://usefathom.com/docs/script/custom-domains) for more details. 
 
 See the Fathom docs for more information on these [advanced tracking options](https://usefathom.com/support/tracking-advanced).
 
