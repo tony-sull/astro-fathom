@@ -1,7 +1,6 @@
 ---
 export type Props = {
 	enabled?: boolean
-	trackingUrl?: string
 	site?: string
 	honorDnt?: boolean
 	auto?: boolean
@@ -14,7 +13,6 @@ export type Props = {
 
 const {
 	enabled = import.meta.env.PROD,
-	trackingUrl = import.meta.env.FATHOM_TRACKING_URL || "https://cdn.usefathom.com",
 	site = import.meta.env.FATHOM_SITE,
 	honorDnt = false,
 	auto = true,
@@ -25,16 +23,12 @@ const {
 	spa = "auto",
 } = Astro.props
 
-if (!trackingUrl) {
-	throw new Error(`[astro-fathom] "trackingUrl" or the "FATHOM_TRACKING_URL" environment variable are required`)
-}
-
 if (!site) {
 	throw new Error(`[astro-fathom] "site or the "FATHOM_SITE" environment variable is required`)
 }
 
 // TODO: a future release of Fathom Analytics will support loading the tracking script from the domain root
-const src = new URL("script.js", trackingUrl).toString()
+const src = "https://cdn.usefathom.com/script.js"
 
 const loadProps = {
 	[loadType]: true,

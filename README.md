@@ -45,7 +45,7 @@ The Fathom script will be included in all production builds. When running with `
 
 ### Environment variables
 
-It's common to keep analytics events separate for different deployment environments - for example `test`, `staging`, and `production`. We recommend using the environment variables listed below to configure the correct `site` and `trackingUrl`, keeping your analytics configuration in the same place as your other environment configuration variables.
+It's common to keep analytics events separate for different deployment environments - for example `test`, `staging`, and `production`. We recommend using the environment variables listed below to configure the correct `site`, keeping your analytics configuration in the same place as your other environment configuration variables.
 
 ### Available options
 
@@ -55,7 +55,6 @@ See the Fathom docs for more information on these [advanced tracking options](ht
 | ----------------- | --------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------- |
 | `enabled`         | Boolean                           | `import.meta.env.PROD`                                               | When disabled, events are logged to the console    |
 | `site`            | String                            | `import.meta.env.FATHOM_SITE`                                        | Your Fathom site id (required)                     |
-| `trackingUrl`     | String                            | `import.meta.env.FATHOM_TRACKING_URL` or `https://cdn.usefathom.com` | Your Fathom custom domain                          |
 | `honorDnt`        | Boolean                           | `false`                                                              | Honor Do Not Track?                                |
 | `auto`            | Boolean                           | `true`                                                               | Automatically track page views?                    |
 | `canonical`       | Boolean                           | `true`                                                               | Use the canonical URL, instead of the current URL? |
@@ -77,7 +76,7 @@ import { Fathom } from "astro-fathom"
     <Fathom />
 
     <!-- or if you prefer to inline configuration variables -->
-    <Fathom site="ABCDEFGH" trackingUrl="https://actor-endorsed.example.com" />
+    <Fathom site="ABCDEFGH" />
   </head>
 </html>
 ```

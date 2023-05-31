@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Fathom Analytics tracking for your Astro site.",
   "type": "module",
+  "types": "./index.ts",
   "exports": {
     ".": "./index.ts"
   },
