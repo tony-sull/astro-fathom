@@ -27,7 +27,6 @@ if (!site) {
 	throw new Error(`[astro-fathom] "site or the "FATHOM_SITE" environment variable is required`)
 }
 
-// TODO: a future release of Fathom Analytics will support loading the tracking script from the domain root
 const src = "https://cdn.usefathom.com/script.js"
 
 const loadProps = {
